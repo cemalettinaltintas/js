@@ -34,28 +34,23 @@ let fark=bitis-bas
 let gunSayisi=Math.floor(fark/1000/60/60/24)
 //console.log(gunSayisi)
 // Her yıl mayıs ayının 2.haftası pazar günü kutlanan anneler günü 2022 yılında ne zaman kutlanacaktır ?
-var annelerGunu=new Date(2021,4,1)
+var annelerGunu=new Date(2024,4,8)
 
 // annelerGunu.setHours(0,0,0)
 // annelerGunu.setFullYear(2022)
 // annelerGunu.setDate(1)
 // annelerGunu.setMonth(4)
 
-// while(annelerGunu.getDay() !=0){
-//     annelerGunu.setDate(annelerGunu.getDate()+1)
-// }
+while(annelerGunu.getDay() !=0){
+    annelerGunu.setDate(annelerGunu.getDate()+1)
+}
 
-// annelerGunu.setDate(annelerGunu.getDate()+7)
-// console.log(annelerGunu)
-// let i=0
-// while(i<5){
-//     console.log(i)
-//     i++
-// }
+ annelerGunu.setDate(annelerGunu.getDate())
+ console.log(annelerGunu)
 
 // ** Yaş hesaplama nasıl yapılır ?
 
-var dogumTarihi=new Date('4/16/2003')
+var dogumTarihi=new Date('4/1/1950')
 
 var yasFarkMs=Date.now()- dogumTarihi.getTime()
 
