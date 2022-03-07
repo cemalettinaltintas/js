@@ -1,6 +1,6 @@
 // Arrays
 let isimler=['salih','erdem','hamza','zilan','diyana']
-let yillar=[2017,2018,2019,2020,2022]
+let yillar=[1990,2018,2001,1999,2022]
 let mix=['hamza','çalkan',2004,null,undefined,['sinema','spor','kitap']]
 // get array item
 
@@ -13,14 +13,14 @@ let mix=['hamza','çalkan',2004,null,undefined,['sinema','spor','kitap']]
 // console.log(isimler[5]);
 
 // add item
-yillar[3]=2000
-yillar.push(2021)
-yillar.unshift(2016)
+// yillar[3]=2010
+// yillar.push(2021)
+// yillar.unshift(2016)
 
 
 // // remove item
-yillar.pop()
-yillar.shift()
+// yillar.pop()
+// yillar.shift()
 
  //indexof
 let index=isimler.indexOf('hamza')
@@ -29,19 +29,29 @@ let index=isimler.indexOf('hamza')
 isimler.reverse()
 
 // sort
-yillar.sort()
+//yillar.sort()
 isimler.sort()
 
 //concat
-let val=yillar.concat(isimler)
+//let val=yillar.concat(isimler)
 //console.log(val);
 // splice
 
-isimler.splice(2,2)
+//isimler.splice(2,3)
 console.log(isimler);
 // find
 
 
+console.log(yillar);
+
+function over18(year) {
+    let age=2022-year
+    return age>=18
+}
+
+val=yillar.find(over18)
+
 // filter
 
-
+val=yillar.filter(over18)
+console.log(val)
