@@ -1,48 +1,53 @@
-// Object Literals
+// Döngüler - Loops
 
-let val
+// for loop 
 
 
-// let person={
-//     firstName:'oğuz',
-//     lastName:'Altıntaş',
-//     age:4,
-//     hobies:['spor','sinema','kitap'],
-//     address:{
-//         city:'Tokat',
-//         country:'Türkiye'
-//     },
-//     getBirthOfYear:function() {
-//         return 2022-this.age
+// for (let i = 0; i < 10; i++) {
+//     if (i==3) {
+//         console.log('en sevdiğim sayı '+i);
+//         continue;
 //     }
+//     if (i==6) {
+//         console.log('en sevmediğim sayı '+i);
+//         break;
+//     }    
+//     console.log(i);
 // }
 
+// for (let i = 0; i < 30; i++) {
+//     if (i%3==0) {
+//         console.log(i);
+//     }   
+// }
 
-// val =person
-// val =person.firstName
-// val =person.lastName
-// val =person['firstName']
-// val=person.age
-// val=person.hobies
-// val=person.hobies.length
-// val=person.address
-// val=person.address.city
-// val=person.address['city']
-// val=person.getBirthOfYear()
+// while loop
 
-let people=[
-    {firstName:'zeynep',lastName:'Şarlayan'},
-    {firstName:'diyana',lastName:'cabo'},
-    {firstName:'zilan',lastName:'sütçü'},
-    {firstName:'erdem',lastName:'demirgöz'}
-]
+// for (let i = 0; i <10; i++) {
+//     console.log(i);
+// }
 
-// val=people[2]
-// val=people[2].firstName
+//let i=10
+// while (i<10) {
+//     console.log(i);
+//     i++
+// }
 
-for (let i = 0; i < people.length; i++) {
-    console.log(people[i].lastName);
+// do while loop
+
+// do {
+//     console.log(i);
+//     i-=2
+// } while (i>=0);
+
+// for of loops
+
+var isimler=['Ali','Ahmet','Sude','Hilal']
+
+// for (let i = 0; i < isimler.length; i++) {
+//     console.log(isimler[i]);
+// }
+
+for (const isim of isimler) {
+    console.log(isim);
 }
-
-// console.log(val)
-// console.log(typeof val)
