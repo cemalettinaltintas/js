@@ -76,30 +76,44 @@
 // console.log(checkSeason(new Date().getMonth()));
 
 // 9- Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
-function randomHexaNumberGenerator() {
-  let hexadecimalSayi='#'
-  let sayi
-  for (let i = 0; i <6; i++) {
-    sayi=Math.floor((Math.random()*16))
-    if (sayi==10) {
-      hexadecimalSayi+='a'
-    }else if(sayi==11){
-      hexadecimalSayi+='b'
-    }
-    else if(sayi==12){
-      hexadecimalSayi+='c'
-    }
-    else if(sayi==13){
-      hexadecimalSayi+='d'
-    }else if(sayi==14){
-      hexadecimalSayi+='e'
-    }else if (sayi==15){
-      hexadecimalSayi+='f'
-    }
-    else{
-      hexadecimalSayi+=sayi.toString()
-    }
-  }
-  return hexadecimalSayi
-}
-console.log(randomHexaNumberGenerator());
+// function randomHexaNumberGenerator() {
+//   let hexadecimalSayi = "#";
+//   let sayi;
+//   for (let i = 0; i < 6; i++) {
+//     sayi = Math.floor(Math.random() * 16);
+//     if (sayi == 10) {
+//       hexadecimalSayi += "a";
+//     } else if (sayi == 11) {
+//       hexadecimalSayi += "b";
+//     } else if (sayi == 12) {
+//       hexadecimalSayi += "c";
+//     } else if (sayi == 13) {
+//       hexadecimalSayi += "d";
+//     } else if (sayi == 14) {
+//       hexadecimalSayi += "e";
+//     } else if (sayi == 15) {
+//       hexadecimalSayi += "f";
+//     } else {
+//       hexadecimalSayi += sayi.toString();
+//     }
+//   }
+//   return hexadecimalSayi;
+// }
+// console.log(randomHexaNumberGenerator());
+
+// function randomHexaNumberGenerator2() {
+//   let sayi
+//   sayi=Math.floor(Math.random() * 16777215).toString(16)
+//   return '#'+sayi
+// }
+
+// console.log(randomHexaNumberGenerator2());
+
+
+// function topla(a=0,b=0) {
+//   return a+b 
+// }
+const topla=(a=0,b=0) => a+b 
+
+// console.log(topla(10,5));
+console.log(topla(10));

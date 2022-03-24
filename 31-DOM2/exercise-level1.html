@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .inner-wrapper {
+        text-align: center;
+      }
+      .wrapper {
+        width: 80%;
+        margin: auto;
+      }
+      ul {
+        list-style-type: none;
+      }
+      ul li {
+        background-color: bisque;
+        margin-bottom: 5px;
+        padding: 10px;
+      }
+      span {
+        font-size: 45px;
+      }
+      .date {
+        padding: 5px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="inner-wrapper">
+        <h1>Erdem Demirgöz challenges in <span class="year">2022</span></h1>
+        <h2>30DaysOfJavaScript Challenge</h2>
+        <p class="date"></p>
+      </div>
+
+      <ul>
+        <li class="done">30DaysOfPython Challenge Done</li>
+        <li class="ongoing">30DaysOfJavaScript Challenge Ongoing</li>
+        <li class="ongoing">30DaysOfReact Challenge Coming</li>
+        <li class="coming">30DaysOfFullStack Challenge Coming</li>
+        <li class="coming">30DaysOfDataAnalysis Challenge Coming</li>
+        <li class="coming">30DaysOfReactNative Challenge Coming</li>
+        <li class="coming">30DaysOfMachineLearning Challenge Coming</li>
+      </ul>
+    </div>
+    <script>
+      let year = document.querySelector(".year");
+      let date = document.querySelector(".date");
+      let colors = [" #00ffff", "#cc99ff", "#00ffcc", "#ffff99", "#ff8533"];
+      let color;
+
+      function renkDegistir() {
+        color = Math.floor(Math.random() * 5);
+        year.style.color = colors[color];
+        color = Math.floor(Math.random() * 5);
+        date.style.backgroundColor = colors[color];
+      }
+      setInterval(renkDegistir, 1000);
+
+      function dijitalSaat() {
+        let dt = new Date();
+        let yil = dt.getFullYear();
+        let ay = ayAdiVer(dt.getMonth());
+        let gun = dt.getDate();
+        let saat = sifirKontrolu(dt.getHours());
+        let dakika = sifirKontrolu(dt.getMinutes());
+        let saniye = sifirKontrolu(dt.getSeconds());
+        console.log(saniye);
+        date.innerHTML = `${ay} ${gun}, ${yil} ${saat}:${dakika}:${saniye}`;
+      }
+      function sifirKontrolu(sayi) {
+        if (sayi < 10) {
+          return "0" + sayi;
+        } else {
+          return sayi;
+        }
+      }
+      function ayAdiVer(sayi) {
+        switch (sayi) {
+          case 0:
+            return "Ocak";
+            break;
+          case 1:
+            return "Şubat";
+            break;
+          case 2:
+            return "Mart";
+            break;
+          case 3:
+            return "Nisan";
+            break;
+          case 4:
+            return "Mayıs";
+            break;
+          case 5:
+            return "Haziran";
+            break;
+          case 6:
+            return "Temmuz";
+            break;
+          case 7:
+            return "Ağustos";
+            break;
+          case 8:
+            return "Eylül";
+            break;
+          case 9:
+            return "Ekim";
+            break;
+          case 10:
+            return "Kasım";
+            break;
+          case 11:
+            return "Aralık";
+            break;
+        }
+      }
+      setInterval(dijitalSaat, 1000);
+
+      const allChallenges = document.querySelectorAll("li");
+      
+      allChallenges.forEach((challenge) => {
+        if (challenge.className == "done") {
+          challenge.style.backgroundColor = "#66ffcc";
+        } else if (challenge.className == "ongoing") {
+          challenge.style.backgroundColor = " #ffff99";
+        } else {
+          challenge.style.backgroundColor = "#ff9933";
+        }
+      });
+    </script>
+  </body>
+</html>

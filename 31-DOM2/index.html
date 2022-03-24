@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <h1 class='title' id='first-title'>First Title</h1>
+    <h1 class='title' id='second-title'>Second Title</h1>
+    <h1 class='title' id='third-title'>Third Title</h1>
+    <h1></h1>
+    <script>
+        //const allTitles=document.getElementsByTagName('h1')
+        
+        // Getting elements by class name
+        /*
+        for (let i = 0; i < allTitles.length; i++) {
+            console.log(allTitles[i]);
+        }
+        */
+        // Getting an element by id
+
+        /*
+        let ilkTitle=document.getElementById('first-title')
+        console.log(ilkTitle);
+        */
+
+        // Getting elements by using querySelector methods
+
+        //let firstTitle = document.querySelector('h1') // select the first available h1 element
+        
+        //let firstTitle = document.querySelector('#first-title') // select id with first-title
+        
+        //let firstTitle = document.querySelector('.title') // select the first available h1 element with class title
+        //console.log(firstTitle);
+
+        const allTitles=document.querySelectorAll('h1')
+        // for (let i = 0; i < allTitles.length; i++) {
+        //     console.log(allTitles[i]);
+        // }
+
+        //allTitles.forEach(element => console.log(element));
+        // allTitles.forEach(function(element){
+        //     console.log(element);
+        // })
+
+
+         const titles=document.querySelectorAll('h1')
+        // titles[3].className='title'
+        // titles[3].id='forth-title'
+
+        
+
+        // Adding attribute using setAttribute
+/*
+        titles[3].setAttribute('class','title')
+        titles[3].setAttribute('id','forth-title')
+*/
+        // Adding class using classList
+        titles[3].classList.add('title','header-title')
+        
+
+
+        // Removing class using remove
+        //titles[3].classList.remove('title','header-title')
+
+        allTitles.forEach(element => console.log(element));
+
+        // Adding Text Content using textContent
+
+        //titles[3].textContent='Forth Title'
+
+      // Adding Text Content using innerHTML
+
+      titles[3].innerHTML='Forth Title'
+    </script>
+</body>
+</html>

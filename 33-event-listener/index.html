@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Object Model</title>
+  </head>
+
+  <body>
+    <button>Click Me</button>
+
+    <script>
+      const button = document.querySelector('button')
+    //   function tikla() {
+    //       console.log('Tıklandı');
+    //   }
+    //   button.addEventListener('click', e => {
+    //     console.log(e)
+    //     console.log(e.target)
+    //     console.log(e.target.textContent
+    //     )
+    //   })
+    // button.addEventListener('dblclick',e=>{
+    //     console.log('Çift tıklandı.');
+    // })
+    button.addEventListener('mouseenter',function(e) {
+        console.log('mouseenter olayı gerçekleşti.');
+    })
+    </script>
+  </body>
+</html>
