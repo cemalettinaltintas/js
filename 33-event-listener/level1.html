@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+      }
+
+      /* Float four columns side by side */
+      .column {
+        float: left;
+        width: 16.66%;
+        padding: 0 5px;
+        margin-bottom: 20px;
+      }
+
+      /* Remove extra left and right margins, due to padding */
+      .row {
+        margin: 0 -5px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Responsive columns */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+          display: block;
+          margin-bottom: 20px;
+        }
+      }
+
+      /* Style the counter cards */
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 8px;
+        text-align: center;
+        background-color: #f1f1f1;
+        font-size: 24px;
+      }
+      button,input{
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+          <h1>Generate Number</h1>
+          <input type="text">
+          <button>Generate Number</button><br><br>
+          <div class="row">
+
+          </div>
+      </div>
+      <script>
+          const row=document.querySelector('.row')
+           let card,column
+           
+           
+          let buton=document.querySelector('button')
+
+          buton.addEventListener('click',kartUret)
+          
+          function kartUret() {
+            row.innerHTML=''
+            let sayi=Number(document.querySelector('input').value)
+            for (let i = 0; i < sayi; i++) {
+               //kolon oluştur
+               column=document.createElement('div')
+               column.classList.add('column')
+
+               //kart oluştur
+               card=document.createElement('div')
+               card.classList.add('card')
+
+               card.innerHTML=`<h3>${i}</h3>`
+
+               //kartı kolana ekle
+               column.appendChild(card)
+               //add column to row
+               row.appendChild(column)
+
+               if(i%2==0){
+                   card.style.backgroundColor='green'
+               }else{
+                card.style.backgroundColor='yellow'
+               }
+
+               if (asalMi(i)) {
+                card.style.backgroundColor='red'
+               }
+           }
+          }
+           function asalMi(sayi) {
+               let durum=true
+               if (sayi<2) {
+                   return false
+               }else{
+                   for (let i = 2; i < sayi; i++) {
+                       if (sayi%i==0) {
+                           durum=false
+                           break
+                       }
+                   }
+                   return durum
+               }
+           }  
+      </script>
+  </body>
+</html>
