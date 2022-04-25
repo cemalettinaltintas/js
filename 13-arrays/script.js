@@ -38,15 +38,15 @@ isimler.sort()
 // splice
 
 //isimler.splice(2,3)
-console.log(isimler);
+//console.log(isimler);
 // find
 
 
-console.log(yillar);
+//console.log(yillar);
 
 function over18(year) {
     let age=2022-year
-    return age>=18
+    return age<=18
 }
 
 val=yillar.find(over18)
@@ -55,3 +55,20 @@ val=yillar.find(over18)
 
 val=yillar.filter(over18)
 console.log(val)
+
+
+//let names=['salih','erdem','hamza','zilan','diyana']
+// for (let  i= 0;  i< names.length; i++) {
+//     console.log(names[i]);
+// }
+// for (const name of names) {
+//     console.log(name);
+// }
+
+// for (const key in names) {
+//   console.log(names[key]);
+// }
+
+// names.forEach(name => {
+//     console.log(name);
+// });

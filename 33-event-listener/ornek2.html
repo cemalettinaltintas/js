@@ -17,30 +17,30 @@
   </head>
   <body>
     <div class="container">
-        <div class="my-3 row">
-            <label for="staticEmail" class="col-sm-2 col-form-label">Vize</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="kk" value="">
-            </div>
-          </div>
-          <div class="mb-3 row">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Final</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="uk">
-            </div>
-          </div>
-          <div class="mb-3 row">
-            <label for="inputPassword" class="col-sm-2 col-form-label"></label>
-            <div class="col-sm-10">
-              <button class="form-control" id="hesapla">Hesapla</button>
-            </div>
-          </div>
-          <div class="mb-3 row">
-            <label for="inputPassword" class="col-sm-2 col-form-label"></label>
-            <div class="col-sm-10">
-                <p></p>
-            </div>
-          </div>
+      <div class="my-3 row">
+        <label for="vize" class="col-sm-2 col-form-label">Vize</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="vize" value="" />
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="final" class="col-sm-2 col-form-label">Final</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="final" />
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="hesapla" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+          <button onclick="ortalamaHesapla()" class="form-control" id="hesapla">Hesapla</button>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+          <p id="ortalama"></p>
+        </div>
+      </div>
     </div>
 
     <script
@@ -49,5 +49,22 @@
       crossorigin="anonymous"
     ></script>
 
+    <script>
+      const ortalama = document.getElementById("ortalama");
+
+      function ortalamaHesapla() {
+        const vize = Number(document.getElementById("vize").value);
+        const final = Number(document.getElementById("final").value);
+        let ort=vize*0.4+final*0.6
+        let sonuc
+        if (ort>=50) {
+           sonuc='geçtiniz.'
+        }else{
+          sonuc='kaldınız.'
+        }
+        ortalama.innerHTML=ort+' ortalama ile '+sonuc
+      }
+
+    </script>
   </body>
 </html>

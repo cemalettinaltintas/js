@@ -32,7 +32,7 @@
  //const karesi= n => {return n*n}
 //  const karesi= n => n*n
 //  console.log(karesi(4));
-const countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
+const countries = ['Turkey','Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
 
 // let buyukHarfeCevir= dizi =>{
 //   const yeniDizi=[]

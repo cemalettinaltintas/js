@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //10-50 arasında rasgele benzersiz 5 sayı üretelim
+      let sayi,i = 0;
+      let sayilar = []
+      // for (let i = 0; i < 5; i++) {
+      //     sayi=Math.floor(Math.random()*10)+10
+      //     console.log(sayi);
+      //     if (!sayilar.includes(sayi)) {
+      //         sayilar[i]=sayi
+      //     }
+      // }
+
+      do {
+        sayi = Math.floor(Math.random() * 50) + 10;
+        if (!sayilar.includes(sayi)) {
+          sayilar[i] = sayi
+          i++
+        }
+      } while (i < 5);
+
+      for (const sayi of sayilar) {
+          console.log(sayi);
+      }
+    </script>
+  </body>
+</html>

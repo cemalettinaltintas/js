@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let sayi=prompt('Enter a number : ')
+      // if (sayi%2==0) {
+      //     console.log(`${sayi} is an even number`);
+      // }else{
+      //     console.log(sayi+' is an odd number.');
+      // }
+
+      //   let ort = prompt("Yıl sonu ortalamanız : ");
+      //   if (ort >= 85 && ort <= 100) {
+      //     console.log("Takdir aldınız.");
+      //   } else if (ort >= 70 && ort < 85) {
+      //     console.log("Teşekkür aldınız.");
+      //   } else if (ort < 0 || ort > 100) {
+      //     console.log("Yanlış giriş.");
+      //   } else {
+      //     console.log("Belge alamadınız.");
+      //   }
+
+      let gunler = [
+        "pazartesi",
+        "salı",
+        "çarşamba",
+        "perşembe",
+        "cuma",
+        "cumartesi",
+        "pazar",
+      ];
+
+      let gun = prompt("Gün adını giriniz :").toLowerCase();
+
+      if (gunler.indexOf(gun) != -1) {
+        if (gun == "pazar" || gun == "cumartesi") {
+          console.log("Haftasonu");
+        } else {
+          console.log("Haftaiçi");
+        }
+      } else {
+        console.log("Yanlış gün adı.");
+      }
+    </script>
+  </body>
+</html>
